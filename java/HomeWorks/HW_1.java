@@ -1,7 +1,9 @@
 package HomeWorks;
 
+import java.util.Arrays;
+
 public class HW_1 {
-    public class Homework {
+    public static class Homework {
 
         public static void main(String[] args) {
             System.out.println(isSumBetween10And20(5, 15)); // true
@@ -17,10 +19,11 @@ public class HW_1 {
             int x = array[2][3];
             int[] array2 = {1, 0, 0, 0, 1, 1, 1, 1, 0, 1, 0};
             int[] array3={ 1, 5, 3, 2, 11, 4, 5, 2, 4, 8, 9, };
-            System.out.println(rewriteArray(array2));
-            System.out.println(multipluyArray(array3));
-            System.out.println(diagonalArray(array));
-
+            System.out.println(Arrays.toString(rewriteArray(array2)));
+            System.out.println(Arrays.toString(multipluyArray(array3)));
+            System.out.println(Arrays.toString(diagonalArray(array)));
+            System.out.println(isLeapYear(1980));
+            System.out.println(Arrays.toString(createArray(10,8)));
         }
 
         /**
@@ -29,13 +32,16 @@ public class HW_1 {
          */
         private static boolean isSumBetween10And20(int a, int b) {
             // проверить, что сумма a и b лежит между 10 и 20
-            boolean flag = a + b > 10 & a + b < 20;
+            boolean flag= false;
+            int sum=a+b;
+            if(sum> 10 & sum < 20) flag=true;
             return flag;
         }
 
         private static boolean isPositive(int x) {
             // проверить, что х положительное
-            boolean flag = x > 0;
+            boolean flag = false;
+            if (x > 0) flag=true;
             return flag;
         }
 
@@ -50,7 +56,9 @@ public class HW_1 {
         private static boolean isLeapYear(int year) {
             // проверить, является ли год високосным. если да - return true
             // год является високосным, если он делится на 4, но не делится на 100, но делится на 400
-            boolean flag = year % 4 == 0 & year % 100 != 0 & year % 400 == 0;
+            boolean flag = false;
+            if(year % 4 == 0 & year % 100 != 0 & year % 400 == 0)
+                flag=true;
             return flag;
         }
 
