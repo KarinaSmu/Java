@@ -2,7 +2,7 @@ package HomeWorks;
 
 import java.util.Arrays;
 
-public class HW_1 {
+    public class HW_1 {
     public static class Homework {
 
         public static void main(String[] args) {
@@ -21,31 +21,32 @@ public class HW_1 {
             int[] array3={ 1, 5, 3, 2, 11, 4, 5, 2, 4, 8, 9, };
             System.out.println(Arrays.toString(rewriteArray(array2)));
             System.out.println(Arrays.toString(multipluyArray(array3)));
+            System.out.println(Arrays.toString(array));
             System.out.println(Arrays.toString(diagonalArray(array)));
             System.out.println(isLeapYear(1980));
             System.out.println(Arrays.toString(createArray(10,8)));
         }
 
-        /**
+             /**
          * 1. Написать метод, принимающий на вход два целых числа и проверяющий,
          * что их сумма лежит в пределах от 10 до 20 (включительно), если да – вернуть true, в противном случае – false.
          */
-        private static boolean isSumBetween10And20(int a, int b) {
+             private static boolean isSumBetween10And20(int a, int b) {
             // проверить, что сумма a и b лежит между 10 и 20
             boolean flag= false;
             int sum=a+b;
-            if(sum> 10 & sum < 20) flag=true;
+            if(sum>= 10 & sum<= 20) flag=true;
             return flag;
         }
 
-        private static boolean isPositive(int x) {
+            private static boolean isPositive(int x) {
             // проверить, что х положительное
             boolean flag = false;
             if (x > 0) flag=true;
             return flag;
         }
 
-        private static void printString(String source, int repeat) {
+            private static void printString(String source, int repeat) {
             // напечатать строку source repeat раз
             for (int i = 0; i < repeat; i++) {
                 System.out.println(source);
@@ -53,7 +54,7 @@ public class HW_1 {
 
         }
 
-        private static boolean isLeapYear(int year) {
+            private static boolean isLeapYear(int year) {
             // проверить, является ли год високосным. если да - return true
             // год является високосным, если он делится на 4, но не делится на 100, но делится на 400
             boolean flag = false;
@@ -62,7 +63,7 @@ public class HW_1 {
             return flag;
         }
 
-        private static int[] createArray(int len, int initialValue) {
+            private static int[] createArray(int len, int initialValue) {
             // должен вернуть массив длины len, каждое значение которого равно initialValue
             int[] array = new int[len];
             for (int i = 0; i < len; i++) {
@@ -82,7 +83,7 @@ public class HW_1 {
          * Определить элементы одной из диагоналей можно по следующему принципу: индексы таких элементов равны, то есть [0][0], [1][1], [2][2], …, [n][n];
          * * Также заполнить элементы побочной диагонали
          */
-        private static int[] rewriteArray(int[] array) {
+            private static int[] rewriteArray(int[] array) {
             for (int i = 0; i < array.length; i++) {
                 if (array[i] == 0) array[i] = 1;
                 else array[i] = 0;
@@ -90,17 +91,18 @@ public class HW_1 {
             return array;
         }
 
-        private static int[] multipluyArray(int [] array){
+            private static int[] multipluyArray(int [] array){
             for (int i = 0; i < array.length; i++) {
                 if (array[i]<6) array[i]*=2;
             }
             return array;
         }
 
-        private static int[][] diagonalArray(int[][] array){
-            for (int i = 0; i < array.length/2; i++) {
-                for (int j = 0; j < array.length/2; j++) {
-                    if (i==j|i+j== array.length/2-1) array[i][j]=1;
+            private static int[][] diagonalArray(int[][] array){
+            for (int i = 0; i < array.length; i++) {
+                for (int j = 0; j < array.length; j++) {
+                    if (i==j|i+j== array.length) array[i][j]=1;
+                    else array[i][j]=0;
                 }
             }
             return array;
