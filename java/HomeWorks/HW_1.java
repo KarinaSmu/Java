@@ -21,7 +21,6 @@ import java.util.Arrays;
             int[] array3={ 1, 5, 3, 2, 11, 4, 5, 2, 4, 8, 9, };
             System.out.println(Arrays.toString(rewriteArray(array2)));
             System.out.println(Arrays.toString(multipluyArray(array3)));
-            System.out.println(Arrays.toString(array));
             System.out.println(Arrays.toString(diagonalArray(array)));
             System.out.println(isLeapYear(1980));
             System.out.println(Arrays.toString(createArray(10,8)));
