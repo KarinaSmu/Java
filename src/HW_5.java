@@ -13,6 +13,7 @@ public class HW_5 {
        System.out.println(isCorrectParentheses("[]{<()[]<>>}")); // true
     }
 
+
     /**
      * Дана последовательность скобочек. Проверить, что она является корректной.
      */

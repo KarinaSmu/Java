@@ -16,6 +16,7 @@ public class HW_3 {
         System.out.println(strings); // [string, my_string]
     }
 
+
     static void removeEvenNumber(List<Integer> numbers) {
         // TODO: 31.03.2023 Удалить все четные элементы из списка
         Iterator iterator = numbers.iterator();
